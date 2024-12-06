@@ -1,9 +1,9 @@
-# Define parameters
+# variables
 $vmName = Read-Host -Prompt "Enter the VM name"
 $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
 $action = Read-Host -Prompt "Enter the action (Start, Stop, Restart)"
 
-# Validate the action input
+# check action correct
 if ($action -eq "Start") {
     Write-Host "Starting the VM..." -ForegroundColor Green
     Start-AzVM -ResourceGroupName $resourceGroupName -Name $vmName
